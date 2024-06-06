@@ -42,6 +42,7 @@ class PuenteEstrecho():
     def conteo(self):
         print(f"Carros en el sentido Norte: {len(self.norte.carros)}")
         print(f"Carros en el sentido Sur: {len(self.sur.carros)}")
+        print("-" * 50)
 
     def ratio(self):
         if len(self.norte.carros) == len(self.sur.carros):
@@ -77,8 +78,8 @@ class PuenteEstrecho():
         print("Todos los carros han pasado.")
 
 def main():
-    norte = Calle(["N", "N", "N", "N", "N", "N"], 0, "Norte", True)
-    sur = Calle(["S", "S"], 0, "Sur", False)
+    norte = Calle(["N", "N", "N", "N", "N", "N", "N", "N", "N", "N"], 0, "Norte", True)
+    sur = Calle(["S", "S", "S", "S", "S", "S", "S"], 0, "Sur", False)
     p = PuenteEstrecho(norte, sur, 0, 0)
     p.run()
 
